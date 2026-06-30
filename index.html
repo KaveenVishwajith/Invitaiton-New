@@ -156,19 +156,38 @@
     }
 
     .monarch {
-      font-family: 'Playfair Display', serif;
-      font-size: 64px;
-      color: #efe3be;
-      font-weight: 900;
-      letter-spacing: 2px;
-      margin: 15px 0 25px;
-      text-shadow: 0 4px 8px rgba(139, 138, 45, 0.8);
-      background: linear-gradient(135deg, #f8f5ea 0%, #e6c87a 50%, #e5e4e2 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 15px 0 25px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    
+    /* Improved gradient for mobile */
+    background: linear-gradient(135deg, #f8f5ea 0%, #e6c87a 45%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Fix for mobile blurriness */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
 
+/* Mobile specific improvement */
+@media (max-width: 640px) {
+    .monarch {
+        font-size: 48px;           /* Slightly smaller on mobile */
+        letter-spacing: 1px;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+        
+        /* Simpler gradient for better mobile performance */
+        background: linear-gradient(to right, #f8f5ea, #e6c87a, #d4af37);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
     /* Details panel */
     .details {
       background: rgba(212, 175, 55, 0.08);
