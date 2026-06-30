@@ -161,34 +161,29 @@
     font-weight: 900;
     letter-spacing: 2px;
     margin: 15px 0 25px;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     
-    /* Improved gradient for desktop */
-    background: linear-gradient(135deg, #f8f5ea 0%, #e6c87a 45%, #d4af37 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    /* Light/White color for better contrast */
+    color: #f8f5ea;
+    background: none;
     
-    /* Fix for rendering quality */
+    /* Sharp rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     transform: translate3d(0, 0, 0);
 }
 
-/* Mobile specific - use solid color for sharpness */
+/* Mobile specific */
 @media (max-width: 640px) {
     .monarch {
         font-size: 48px;
         letter-spacing: 1px;
         
-        /* Switch to solid color for crisp mobile rendering */
-        background: none;
-        -webkit-text-fill-color: unset;
-        color: #d4af37;
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+        /* Light color - crisp on mobile */
+        color: #f8f5ea;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
         
-        /* Enhanced sharpness */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         transform: translate3d(0, 0, 0);
